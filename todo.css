@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(233, 245, 255);
+}
+
+.wrapper {
+    position:relative;
+    margin: 4% auto;
+    width: 360px;
+    height: 660px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(251, 254, 255);
+    filter: drop-shadow(2px 2px 6px #c0d9ff);
+}
+
+h2 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.header {
+    position:relative;
+    padding:40px;
+    width: 100%;
+    background: linear-gradient(to right,#845EC2, #4FFBDF);
+    color: white;
+    line-height: 28px;
+}
+.remove {
+    font-size: 16pt;
+    color:black;
+}
+
+.listpunkt {
+    list-style-type: none;
+    background-color: lightcyan;
+    color:black;
+
+}
+
+.listpunkt:nth-last-of-type(odd) {
+    background-color: rgb(235, 191, 255);
+    text-decoration: li;
+}
+
+.listpunkt:hover {
+    cursor: pointer;
+}
+
+.check {
+    color: purple;
+}
+.strykaÖver {
+    text-decoration: line-through;
+}
+
+
+.removeText {
+    text-align:center;
+    font-size: 14px;
+    cursor:pointer;
+    padding: 4px 15px;
+    display:inline;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+
+.header p {
+    font-size: 16px;
+}
+
+.todo-holder {
+    position:relative;
+    width:100%;
+    height: 500px;
+    overflow-y:scroll;
+}
+.todo-holder::-webkit-scrollbar {
+    background: transparent;
+    width: 1px;
+}
+#submittodo {
+    border:none;
+    background:transparent;
+    display:inline;
+    font-size: 20pt;
+    padding:20px;
+    color:#845EC2;
+}
+
+.todo-list .todo-item {
+    color: #4B4453;
+}
+
+.checkbox {
+    display:inline-block;
+    margin-left: 10px;
+}
+
+.todoInput {
+    position:relative;
+    bottom:0;
+    left:0;
+    padding:20px;
+    width:80%;
+    border:0;
+}
+.todoInput:focus {
+    outline:none;
+}
+
+.remove-link {
+    margin-left: 10px;
+    color: black;
+}
