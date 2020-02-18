@@ -83,32 +83,32 @@ skapaTodo = () => {
     if(todoitem === undefined || todoitem === '') alert('tomt!');
     listPunkt = document.createElement('li');
     listPunkt.setAttribute ('class', 'listpunkt');
-    listPunkt.innerHTML = `<i class="far fa-check-circle check" id="check"></i>     `;
+    listPunkt.innerHTML = `<i class="fas fa-broom" id = "trash"></i>`;
     listPunkt.appendChild(todoitem);
     UlListan.appendChild(listPunkt);
     lagraTodo();
 }
 //lagrar UL i localStorage
+
 lagraTodo = () => {
     localStorage.helaListan = UlListan.innerHTML;
 }
 
+let todoItems = '';
+
 visaTodo = () => {
-    let todoItems = '';
     todoItems = localStorage.helaListan;
     UlListan.innerHTML += todoItems;
 }
 visaTodo();
 
-listPunkt.onclick = () => {
-        listPunkt.setAttribute('class', 'listpunktklick');
-};
-
+let trashKnapp = document.querySelectorAll('I');
 
 
 document.querySelector('#todoList').addEventListener('click', function(e) {
        if (e.target.tagName === 'LI') {
         e.target.classList.toggle('strykaÖver');
+
        }
 });
 
