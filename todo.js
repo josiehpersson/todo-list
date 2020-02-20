@@ -1,54 +1,3 @@
-/* const removeButton = document.getElementById('remove-text-button');
-const todoInput = document.getElementById('todo-input');
-const ultodoList = document.getElementById('todoList');
-const litodoItem = document.getElementById('todoItem');
-const submitButton = document.getElementById('submittodo');
-
-
-
-removeTodos = () => {}
-
-submitButton.addEventListener('click', function (){
-    createTodos();
-    }); //skapar en todo och visar en todo.
-    
-createTodos = () => {
-    addTodo();
-    displayTodo();
-};
-
-removeButton.addEventListener('click', function() {
-    ultodoList.innerHTML = '';
-    localStorage.clear();
-}); //tömmer UL listan i localstorage.
-
-addTodo = () => {
-    if(todoInput.value === '' || todoInput.value === undefined) {
-        return false;
-    }
-    localStorage.todoInput = todoInput.value;
-    return true;
-}; 
-//lägger till en todo
-
-displayTodo = () => {
-    todoInput.value = '';
-    let item = localStorage.todoInput;
-    let listitem = '';
-    listitem = `<li>${item}</li>`;
-    ultodoList.innerHTML += listitem;
-    localStorage.ultodoList = ultodoList.innerHTML;
-}; 
-//visar en todo, tar bort text i inputfältet.
-
-
-getTodos = () => {
-    ultodoList.innerHTML += localStorage.ultodoList;
-}; 
-//hämtar todos från localstorage.
-
-getTodos(); */
-
 const tabortAllaTodos = document.getElementById('remove-text-button');
 const inputFältet = document.getElementById('todo-input');
 const läggTillKnapp = document.getElementById ('submittodo');
@@ -97,12 +46,11 @@ lagraTodo = () => {
 let todoItems = '';
 
 visaTodo = () => {
+    if (localStorage.todoItems === '' || localStorage.todoItems === undefined) return;
     todoItems = localStorage.helaListan;
     UlListan.innerHTML += todoItems;
 }
 visaTodo();
-
-let trashKnapp = document.querySelectorAll('I');
 
 
 document.querySelector('#todoList').addEventListener('click', function(e) {
